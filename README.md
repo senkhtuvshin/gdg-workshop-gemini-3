@@ -1,81 +1,57 @@
 # Building with Gemini 3 Flash — GDG UCSD Workshop 2026
 
-A hands-on workshop for UCSD developers on building with Google's Gemini 3 Flash model via the Vertex AI API. By the end of this workshop, you'll know **when to make AI think harder — and when not to.**
+A hands-on PropTech simulation for UCSD developers. Learn to orchestrate Gemini’s "eyes" and "logic" to transform raw data into high-stakes investment decisions.
 
 ---
 
-## What's Covered
+## Workshop Objective
+By the end of this session, you will have built a multimodal pipeline that synthesizes unstructured visual data and structured CSV records into a professional-grade investment thesis.
 
-**01 — How Hard Should AI Think?**
-Introduction to the `thinking_level` parameter. Learn the trade-off between speed (MINIMAL) and deep reasoning (HIGH) through a Big-O lens.
-
-**02 — Giving the AI "Eyes"**
-Introduction to multimodal inputs and the `media_resolution` parameter. Control how many tokens the model spends processing images and video.
-
-**03 — See the Thinking**
-Hands-on challenge using Thought Summaries (`include_thoughts=True`) to visualize the difference between MINIMAL and HIGH reasoning in real time.
+## The Tech Stack
+* **Thinking Levels:** Balancing $O(1)$ latency with $O(N)$ reasoning.
+* **Media Resolution:** Optimizing data arrays for visual forensics.
+* **Code Execution:** Automating data science tasks with natural language.
+* **Thought Signatures:** Managing "Save States" in complex AI reasoning.
 
 ---
 
-## Prerequisites
+## Workshop Agenda
 
-- A Google account
-- A Google Cloud Project ([create one here](https://console.cloud.google.com/))
-- Vertex AI API enabled on your project ([enable it here](https://console.cloud.google.com/flows/enableapi?apiid=aiplatform.googleapis.com))
-- Billing account attached to your project (required for Vertex AI — **you will not be charged** for this workshop)
+### Part 1: The Fundamentals
+1. **Dynamic Thinking:** Understanding the trade-off between speed (MINIMAL) and deep reasoning (HIGH).
+2. **Multimodal Vision:** Handling high-dimensional pixel arrays and the `media_resolution` parameter.
+3. **Structured Outputs:** Turning "unstructured" AI thoughts into valid JSON/Pydantic schemas.
+
+### Part 2: The Junior Analyst Challenge (Project)
+4. **The Discovery Phase:** Use Code Execution to scan 5,000 California housing records to find a unique investment lead.
+5. **Forensic Walkthrough:** Use High-Resolution vision to inspect "distressed" property photos for hidden costs (the "Pizza Box" test).
+6. **The Boardroom Pitch:** Configure your AI's Risk Appetite and Tone to generate a final BUY/PASS recommendation.
 
 ---
 
 ## Getting Started
 
-1. Open the notebook in Google Colab: **[intro_gemini_3_flash.ipynb]**
-2. Click **File → Save a copy in Drive** — work from your own copy
-3. Run cells 1–3 to install the SDK, import libraries, and authenticate
-4. Paste your Google Cloud Project ID into cell 4
-5. You're ready to go
+1. **Setup your API Key:** Follow the steps in the [Authentication Notebook](https://colab.research.google.com/drive/1VWrc7UWbC1rWM1wX2nAyvUTzfxRyacI7).
+2. **Launch the Project:** Open the [UCSD Real Estate Workshop Notebook](https://colab.research.google.com/drive/19hQ1aF3rblbXTFeji81vvd2JVAQ_KFAu).
+3. **Configure Secrets:** Add your `GOOGLE_API_KEY` to the Colab Secrets (🔑) tab.
 
 ---
 
-## Notebook Structure
-
-| Section | Cells | Description |
-|---|---|---|
-| Setup | 1–5 | Install SDK, authenticate, configure project and model |
-| Quickstart | 6 | Your first `generate_content` call |
-| Thinking Level | 7–9 | MINIMAL vs LOW vs MEDIUM vs HIGH — latency/reasoning trade-off |
-| Media Resolution | 10–12 | Control token usage for images and video |
-| Thought Signatures | 13–16 | Preserving reasoning state across multi-turn function calls |
-| Streaming Function Calling | 17 | Stream partial function call arguments |
-| Multimodal Function Responses | 18 | Return images and files from tool calls |
-| Supported Features | 19–35 | System instructions, parameters, streaming, chat, safety, async, multimodality, structured output, search, code execution, URL context, function calling, token counting |
-
----
-
-## Key Concepts
+## 💡 Key Parameters Reference
 
 ### `thinking_level`
-Controls how much the model deliberates before responding.
-
-| Level | Use When | Trade-off |
+| Level | Complexity | Best For |
 |---|---|---|
-| `MINIMAL` | Simple Q&A, translations, summaries | Fastest, cheapest — minimal self-checking |
-| `LOW` | Straightforward tasks with light reasoning | Slightly slower, slightly more thorough |
-| `MEDIUM` | Moderate complexity | Balanced latency and reasoning depth |
-| `HIGH` | Complex code, math, multi-step logic | Slowest, most thorough — model self-corrects |
-| *(default)* | Unspecified | Dynamically adjusts based on prompt complexity |
+| `MINIMAL` | $O(1)$ | Fast Q&A, translations, simple summaries. |
+| `HIGH` | $O(N)$ | Complex code, math, and logical self-correction. |
 
 ### `media_resolution`
-Controls how many tokens the model spends processing visual inputs.
-
-| Level | Use When |
-|---|---|
-| `LOW` | General scene understanding, fast processing |
-| `MEDIUM` | Balanced detail and cost |
-| `HIGH` | Fine detail, small text, labels |
-| `ULTRA_HIGH` | Maximum detail — per-part only, not global |
+| Level | Strategy | Use Case |
+|---|---|---|
+| `LOW` | Fast Indexing | General scene understanding and layout. |
+| `HIGH` | Deep Scan | Reading fine text, labels, and small anomalies. |
 
 ---
 
 ## About GDG UCSD
-
-Google Developer Group UCSD is UCSD's official Google Developer Group. We run technical workshops, tech talks, and build projects together — aligned with Google developer standards across Firebase, TensorFlow, Gemini, and more.
+This workshop is part of the GDG UCSD 2026 AI Series. Stay tuned for future workshops!
