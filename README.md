@@ -28,7 +28,7 @@ Hands-on challenge using Thought Summaries (`include_thoughts=True`) to visualiz
 
 ## Getting Started
 
-1. Open the notebook in Google Colab: **[intro_gemini_3_flash.ipynb](./intro_gemini_3_flash.ipynb)**
+1. Open the notebook in Google Colab: **[intro_gemini_3_flash.ipynb]**
 2. Click **File → Save a copy in Drive** — work from your own copy
 3. Run cells 1–3 to install the SDK, import libraries, and authenticate
 4. Paste your Google Cloud Project ID into cell 4
@@ -73,15 +73,6 @@ Controls how many tokens the model spends processing visual inputs.
 | `MEDIUM` | Balanced detail and cost |
 | `HIGH` | Fine detail, small text, labels |
 | `ULTRA_HIGH` | Maximum detail — per-part only, not global |
-
----
-
-## Resources
-
-- [Gemini 3 Flash on Vertex AI](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/3-flash)
-- [Google Gen AI SDK for Python](https://pypi.org/project/google-genai/)
-- [Vertex AI Generative AI docs](https://cloud.google.com/vertex-ai/generative-ai/docs)
-- [GDG UCSD](https://gdg.community.dev/gdg-on-campus-university-of-california-san-diego-la-jolla-usa/)
 
 ---
 
